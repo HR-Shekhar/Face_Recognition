@@ -1,0 +1,10 @@
+numpy
+opencv-python
+torch
+torchvision
+insightface
+fastapi
+uvicorn[standard]
+streamlit
+python-multipart
+pillow
