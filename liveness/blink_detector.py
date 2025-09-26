@@ -5,7 +5,7 @@ import mediapipe as mp
 import time
 
 class BlinkDetector:
-    def __init__(self, blink_threshold=0.25, consecutive_frames=3, liveness_timeout=3):
+    def __init__(self, blink_threshold=0.25, consecutive_frames=3, liveness_timeout=10):
         self.blink_threshold = blink_threshold
         self.consecutive_frames = consecutive_frames
         self.counter = 0

@@ -8,7 +8,7 @@ from liveness.blink_detector import BlinkDetector
 def run_live(device_id=0, ctx_id=0, det_size=(640, 640)):
     detector = SCRFDDetector(ctx_id=ctx_id, det_size=det_size)
     db = FaceDatabase()
-    blink_detector = BlinkDetector(liveness_timeout=3)  # re-check every 3 sec
+    blink_detector = BlinkDetector(liveness_timeout=10)  # re-check every 10 sec
 
     print("[INFO] Known people:", db.list_people())
 

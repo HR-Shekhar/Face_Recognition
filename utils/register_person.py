@@ -1,27 +1,28 @@
-# utils/register_person.py
 import cv2
 import numpy as np
 from detection.scrfd_detector import SCRFDDetector
-from recognition.database import FaceDatabase
-import time
+from recognition.database import FaceDatabase           # helps store Face embeddings
+import time                         # measures how long registration takes
 
+# (ctx_id is either 0 or -1)-> 0 for gpu and -1 for cpu
+# device_id by default 0 for device cam 
 def capture_and_register(name, num_samples=5, device_id=0, ctx_id=0):
     """
     Open webcam, capture num_samples face crops and embeddings, save to DB.
     """
-    detector = SCRFDDetector(ctx_id=ctx_id)
+    detector = SCRFDDetector(ctx_id=ctx_id)    
     db = FaceDatabase()
 
-    cap = cv2.VideoCapture(device_id)
-    collected = []
+    cap = cv2.VideoCapture(device_id)  #opens webcam
+    collected = []                     # list to store embeddings
     print(f"[INFO] Please position {name} in front of the camera. Capturing {num_samples} good frames...")
-    t0 = time.time()
+    t0 = time.time()    
     while len(collected) < num_samples:
-        ret, frame = cap.read()
+        ret, frame = cap.read()   # ret = whether the webcam gave a frame (True/False).(camera working?)
         if not ret:
             continue
-        faces = detector.detect(frame)
-        if len(faces) == 0:
+        faces = detector.detect(frame)  # frame = the actual captured image (numpy array).
+        if len(faces) == 0:   #* if no face in the frame wait or exit if user presses q
             cv2.putText(frame, "No face detected", (20,40), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0,0,255),2)
             cv2.imshow("Register", frame)
             if cv2.waitKey(1) & 0xFF == ord('q'):
