@@ -9,12 +9,16 @@
 
 ---
 
+### **NOTE :- Create a known_faces directory in the Project Root directory**
+
 ## 📂 Project Structure
 
 Face_Recognition/
 │── detection/
 │ └── scrfd_detector.py # SCRFD face detector wrapper
-│
+|
+|── known_faces/
+│ 
 │── recognition/
 │ └── database.py # Stores and matches face embeddings
 │
@@ -32,9 +36,8 @@ Face_Recognition/
 ## ⚙️ Installation
 
 1. Clone the repo:
-   ```bash
-   git clone https://github.com/yourusername/face_recognition.git
-   cd face_recognition
+   git clone https://github.com/HR-Shekhar/Face_Recognition.git
+   cd Face_Recognition
 
 2. Create and activate a virtual environment:
     python -m venv ml_env        # suggested python version 3.12.9
