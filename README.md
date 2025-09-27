@@ -9,7 +9,7 @@
 
 ---
 
-### **NOTE :- Create a known faces directory in the Project Root directory**
+### **NOTE :- Create a known_faces directory in the Project Root directory**
 
 ## 📂 Project Structure
 
