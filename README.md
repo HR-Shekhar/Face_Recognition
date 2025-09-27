@@ -9,12 +9,16 @@
 
 ---
 
+### **NOTE :- Create a known faces directory in the Project Root directory**
+
 ## 📂 Project Structure
 
 Face_Recognition/
 │── detection/
 │ └── scrfd_detector.py # SCRFD face detector wrapper
-│
+|
+|── known_faces/
+│ 
 │── recognition/
 │ └── database.py # Stores and matches face embeddings
 │
