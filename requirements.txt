@@ -3,8 +3,9 @@ opencv-python
 torch
 torchvision
 insightface
-fastapi
-uvicorn[standard]
+fastapi            #(not used yet)
+uvicorn[standard]  #(not used yet)
 streamlit
 python-multipart
 pillow
+mediapipe  #suggested version 0.10

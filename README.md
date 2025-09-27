@@ -37,7 +37,7 @@ Face_Recognition/
    cd face_recognition
 
 2. Create and activate a virtual environment:
-    python -m venv ml_env
+    python -m venv ml_env        # suggested python version 3.12.9
     ml_env\Scripts\activate      # On Windows
     source ml_env/bin/activate   # On Linux/Mac
 Or use Conda 
