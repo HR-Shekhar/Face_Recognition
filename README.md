@@ -33,8 +33,8 @@ Face_Recognition/
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/yourusername/face_recognition.git
-   cd face_recognition
+   git clone https://github.com/HR-Shekhar/Face_Recognition.git
+   cd Face_Recognition
 
 2. Create and activate a virtual environment:
     python -m venv ml_env
